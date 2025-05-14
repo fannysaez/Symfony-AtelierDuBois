@@ -1,0 +1,95 @@
+/* Header */
+header {
+  z-index: 10;
+  position: fixed;
+  width: 100%;
+  max-width: 1920px;
+  background-color: var(--color-white);
+}
+
+/* Footer */
+footer {
+  position: relative;
+  max-width: 1920px;
+  margin-top: -50px;
+  z-index: 0;
+  width: 100%;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  padding: 50px;
+  gap: 100px;
+}
+
+footer::before {
+  content: "";
+  display: block;
+  position: relative;
+}
+
+.footer-container {
+  max-width: 400px;
+  gap: 130px;
+}
+
+.footer-container img {
+  max-width: 200px;
+}
+
+.footer-info {
+  gap: 30px;
+}
+
+.footer-contact {
+  gap: 10px;
+}
+
+/* Button */
+.btn {
+  padding: 10px 20px 10px 20px;
+}
+
+.btn:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.btn-primary {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+/* Link */
+.link {
+  width: fit-content;
+  display: inline-block;
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.link:hover {
+  transform: translateY(-2px);
+}
+
+/* Form */
+form {
+  width: 100%;
+  max-width: 500px;
+}
+
+input,
+textarea {
+  padding: 10px 12px 10px 12px;
+  border: solid 1px var(--color-dark);
+  background-color: var(--color-white);
+
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-p);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+  max-height: 300px;
+}

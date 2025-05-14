@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  transition: all 0.3s;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-p);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+}
+
+main {
+  flex: 1;
+  z-index: 5;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 1920px;
+  background-color: var(--color-white);
+  border-radius: 0 0 50px 50px;
+
+  padding: 100px 100px 0 100px;
+}
+
+section {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  position: relative;
+  max-width: 1200px;
+  padding: 100px 0 100px 0;
+  gap: 100px;
+}
+
+.hero div {
+  max-width: 800px;
+  gap: 30px;
+}
+
+.hero-img-1 {
+  width: 100%;
+}
+
+.hero-img-2 {
+  position: absolute;
+  left: 725px;
+  top: 434px;
+  border: solid 30px var(--color-white);
+}
+
+.hero-img-3 {
+  position: absolute;
+  left: -957px;
+  top: 485px;
+  border: solid 30px var(--color-white);
+}
+
+/* Présentation Atelier */
+.atelier-presentation {
+  padding: 200px 0 200px 0;
+  gap: 100px;
+}
+
+.projects-list {
+  width: 100%;
+  max-width: 600px;
+}
+
+.project-card {
+  width: 100%;
+  padding: 20px 0 20px 0;
+  border-bottom: solid 1px var(--color-dark);
+}
+
+.project-card:hover {
+  transform: scale(1.04);
+}
+
+/* Contact */
+.contact {
+  padding: 100px 0 0 0;
+  gap: 50px;
+}
+
+.contact-presentation {
+  padding: 100px 0 200px 0;
+  gap: 100px;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1024px) {
+  /* Hero */
+  .hero-img-2 {
+    visibility: hidden;
+  }
+
+  .hero-img-3 {
+    visibility: hidden;
+  }
+
+  /* Présentation Atelier */
+  .atelier-presentation {
+    padding: 50px 0 200px 0;
+    gap: 100px;
+  }
+
+  /* Projects */
+  .projects-section {
+    flex-direction: column;
+  }
+
+  .projects-list {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* Font Size */
+  h1 {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2.3rem;
+    line-height: 2.5rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  main {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+
+  /* Footer */
+  footer {
+    padding: 30px;
+  }
+
+  /* Font Size */
+  h1 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+}

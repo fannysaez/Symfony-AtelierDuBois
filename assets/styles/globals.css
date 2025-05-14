@@ -1,0 +1,105 @@
+@import url("components.css");
+@import url("utilities.css");
+
+@font-face {
+  font-family: "BDO Grotesk";
+  src: url(/fonts/BDOGrotesk-VF.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Bricolage Grotesque";
+  src: url(/fonts/BricolageGrotesque-VariableFont_opsz\wdth\wght.ttf)
+    format("truetype");
+}
+
+:root {
+  /* Primary Color */
+  --color-dark: #1e1e1e;
+  --color-white: #ddd9d6;
+  --color-orange: #ff4f2d;
+
+  /* Secondary Color */
+  --color-green: #00be50;
+
+  /* Font Family */
+  --font-bdo: "BDO Grotesk", sans-serif;
+  --font-bricolage: "Bricolage Grotesque", sans-serif;
+
+  /* Font Size */
+  --font-size-p: 1rem;
+  --font-size-h1: 3rem;
+  --font-size-h2: 3rem;
+  --font-size-h3: 2rem;
+
+  /* Font Weight */
+  --font-weight-regular: 500;
+  --font-weight-medium: 600;
+
+  /* Line heights */
+  --line-height-p: 1.5rem;
+  --line-height-h1: 3.125rem;
+  --line-height-h2: 3.125rem;
+  --line-height-h3: 2.5rem;
+
+  /* Spacing Scale (Base: 2px / 0.125rem) */
+  --spacing-unit: 0.125rem;
+}
+
+::selection {
+  color: var(--color-dark);
+  background: var(--color-orange);
+}
+
+/* Font Style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-medium);
+}
+
+h1 {
+  font-family: var(--font-bricolage);
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-h1);
+}
+
+h2 {
+  font-family: var(--font-bricolage);
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-h2);
+}
+
+h3 {
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-h3);
+}
+
+p {
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-p);
+}
+
+/* Reset */
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+strong {
+  font-weight: var(--font-weight-medium);
+}
+
+button {
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-p);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-p);
+  background: none;
+  border: none;
+}
