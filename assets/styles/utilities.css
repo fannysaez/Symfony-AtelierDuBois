@@ -70,6 +70,10 @@
     gap: calc(var(--spacing-unit) * 10);
 }
 
+.gap-15 {
+    gap: calc(var(--spacing-unit) * 15);
+}
+
 /* Padding */
 .p-1 {
     padding: calc(var(--spacing-unit) * 1);

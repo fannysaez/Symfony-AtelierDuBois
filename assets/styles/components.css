@@ -58,6 +58,22 @@ footer::before {
   color: var(--color-white);
 }
 
+.btn-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 41px;
+  width: 41px;
+  padding: 10px 10px 10px 10px;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+.btn-account:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
 /* Link */
 .link {
   width: fit-content;
@@ -67,6 +83,18 @@ footer::before {
 }
 
 .link:hover {
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  color: var(--color-dark);
+  width: fit-content;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 6px;
   transform: translateY(-2px);
 }
 

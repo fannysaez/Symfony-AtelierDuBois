@@ -1,19 +1,31 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block main %}
+<section class="contact flex flex-column items-center">
+    {{ form_start(registrationForm) }}
 
-{% block body %}
-    <h1>Register</h1>
+    <div class="flex flex-column">
+        <h1 class="text-center">Inscription</h1>
+        <p>Déjà un compte ? <a class="text-link" href="{{ path('app_login') }}">Connectez-vous</a> !</p>
+    </div>
 
     {{ form_errors(registrationForm) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
 
-        <button type="submit" class="btn">Register</button>
+
+    {{ form_row(registrationForm.email) }}
+
+
+    {{ form_row(registrationForm.plainPassword, {
+    label: 'Password' }) }}
+
+    <div class="flex flex-column">
+        {{ form_row(registrationForm.agreeTerms) }}
+    </div>
+
+    <button type="submit" class="btn btn-primary">S'inscrire</button>
+
     {{ form_end(registrationForm) }}
+
+</section>
 {% endblock %}

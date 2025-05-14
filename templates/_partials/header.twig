@@ -1,6 +1,15 @@
 <header class="flex justify-between p-15">
-  <a href="./index.php">
+  <a href="{{ path('home_index') }}">
     <img src="{{ asset('logo-orange.svg') }}" alt="Logo L'Atelier du Bois" />
   </a>
-  <a class="btn btn-primary" href="">Contact</a>
+  <nav class="flex flex-row items-center gap-15">
+    <a class="nav-link" href="{{ path('product_index') }}">Nos produits</a>
+    <a class="nav-link" href="{{ path('product_index') }}">Créer un devis</a>
+    <div class="">
+      <a class="btn btn-primary" href="{{ path('home_contact') }}">Contact</a>
+      <a class="btn-account" href="{{ path('app_login') }}">
+        <img src="{{ asset('icons/icon-account.svg') }}" alt="Icone Compte">
+      </a>
+    </div>
+  </nav>
 </header>
