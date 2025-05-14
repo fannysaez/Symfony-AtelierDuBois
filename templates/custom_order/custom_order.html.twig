@@ -7,15 +7,20 @@
 
 {% block main %}
 
+<section class="flex flex-column items-center pt-50 pb-50">
+
 <h1>Devis</h1>
 
 {{ form_start(form) }}
 
 
+{{ form_widget(form) }}
 
-<button type="submit">Sauvegarder</button>
+<button class="btn btn-primary" type="submit">Sauvegarder</button>
+
 
 {{ form_end(form) }}
+</section>
 
 {% endblock %}
 
