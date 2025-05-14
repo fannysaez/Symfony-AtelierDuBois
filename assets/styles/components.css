@@ -62,8 +62,8 @@ footer::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 41px;
-  width: 41px;
+  height: 42px;
+  width: 42px;
   padding: 10px 10px 10px 10px;
   background-color: var(--color-orange);
   color: var(--color-white);
