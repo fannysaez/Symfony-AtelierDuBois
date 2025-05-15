@@ -26,14 +26,22 @@ class CustomOrderTypeForm extends AbstractType
             ->add('length', ChoiceType::class, [
                 'choices' => [
                     'Selectionner une longueur' => null,
-                    '60 cm' => 60,
+                    '50 cm' => 50,
                     '80 cm' => 80,
-                    '100 cm' => 100
+                    '100 cm' => 100,
+                    '120 cm' => 120,
+                    '150 cm' => 150,
+                    '180 cm' => 180,
+                    '200 cm' => 200,
+                    '250 cm' => 250,
+                    '300 cm' => 300,
                 ]
             ])
             ->add('width', ChoiceType::class, [
                 'choices' => [
                     'Selectionner une largeur' => null,
+                    '10 cm' => 10,
+                    '20 cm' => 20,
                     '30 cm' => 30,
                     '40 cm' => 40,
                     '50 cm' => 50
