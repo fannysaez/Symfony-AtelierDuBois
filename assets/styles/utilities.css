@@ -74,6 +74,11 @@
     gap: calc(var(--spacing-unit) * 15);
 }
 
+/* 50px */
+.gap-25 {
+    gap: calc(var(--spacing-unit) * 25);
+}
+
 /* 100px */
 .gap-50 {
     gap: calc(var(--spacing-unit) * 50);
