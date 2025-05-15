@@ -131,7 +131,7 @@ form div {
 }
 
 input,
-textarea, 
+textarea,
 select {
   padding: 10px 12px 10px 12px;
   border: solid 1px var(--color-dark);
@@ -161,4 +161,12 @@ textarea {
 
 .card:hover {
   border: solid 1px var(--color-dark);
+  transform: scale(0.98);
+}
+
+.tag {
+  width: fit-content;
+  padding: 6px 10px 6px 10px;
+  color: var(--color-white);
+  background-color: var(--color-dark);
 }
