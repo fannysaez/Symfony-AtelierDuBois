@@ -7,23 +7,11 @@
     <a class="btn btn-primary" href="{{ path('home_contact') }}">Contact</a>
   </div>
 
-  <img
-    class="hero-img-1"
-    src="{{ asset('img/image-hero-1.jpg') }}"
-    alt="Image Projet Menuiserie 1"
-  />
+  <img class="hero-img-1" src="{{ asset('img/image-hero-1.jpg') }}" alt="Image Projet Menuiserie 1" />
 
-  <img
-    class="hero-img-2"
-    src="{{ asset('img/image-hero-2.jpg') }}"
-    alt="Image Projet Menuiserie 2"
-  />
+  <img class="hero-img-2" src="{{ asset('img/image-hero-2.jpg') }}" alt="Image Projet Menuiserie 2" />
 
-  <img
-    class="hero-img-3"
-    src="{{ asset('img/image-hero-3.jpg') }}"
-    alt="Image Projet Menuiserie 3"
-  />
+  <img class="hero-img-3" src="{{ asset('img/image-hero-3.jpg') }}" alt="Image Projet Menuiserie 3" />
 </section>
 
 <section class="atelier-presentation flex flex-column">
@@ -44,10 +32,11 @@
   </div>
 
   <div class="products-section flex flex-column gap-25">
-    
+    <h3>Nos produits</h3>
 
+    <div class="products-grid">
+
+    </div>
   </div>
-
-  {% include "_partials/card.twig" %}
 </section>
 {% endblock %}
