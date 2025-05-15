@@ -38,6 +38,10 @@ class RegistrationController extends AbstractController
             return $security->login($user, AppCustomAuthenticator::class, 'main');
         }
 
+        if ($this->getUser()) {
+            return $this->redirectToRoute('home_index');
+        }
+
         return $this->render('registration/register.html.twig', [
             'registrationForm' => $form,
         ]);
