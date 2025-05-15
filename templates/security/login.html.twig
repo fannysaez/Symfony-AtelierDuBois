@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-<section class="flex flex-column items-center">
+<section class="section-login flex flex-column items-center">
     <form method="post">
         {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
