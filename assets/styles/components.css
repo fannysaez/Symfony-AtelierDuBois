@@ -78,8 +78,13 @@ footer::before {
 .link {
   width: fit-content;
   display: inline-block;
+  color: var(--color-dark);
   text-decoration: underline;
   text-underline-offset: 6px;
+}
+
+.link-white {
+  color: var(--color-white);
 }
 
 .link:hover {
@@ -116,6 +121,13 @@ form div {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+#agree-terms div {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 6px;
 }
 
 input,

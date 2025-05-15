@@ -3,12 +3,12 @@
 
 @font-face {
   font-family: "BDO Grotesk";
-  src: url(/fonts/BDOGrotesk-VF.ttf) format("truetype");
+  src: url(../fonts/BDOGrotesk-VF.ttf) format("truetype");
 }
 
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url(/fonts/BricolageGrotesque-VariableFont_opsz\wdth\wght.ttf)
+  src: url(../fonts/BricolageGrotesque-VariableFont_opsz\wdth\wght.ttf)
     format("truetype");
 }
 
