@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+
+{% block main %}
+<section class="section-login flex flex-column items-center justify-center">
+    <div class="flex flex-column items-center">
+        <h1 class="text-center">Déconnexion</h1>
+        <p>Déconnectez-vous ici ? <a class="link" href="{{ path('app_logout') }}">Se déconnecter</a> !</p>
+    </div>
+
+</section>
+{% endblock %}
