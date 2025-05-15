@@ -3,11 +3,19 @@
     <img src="{{ asset('logo-orange.svg') }}" alt="Logo L'Atelier du Bois" />
   </a>
   <nav class="flex flex-row items-center gap-15">
+
     <a class="nav-link" href="{{ path('product_index') }}">Nos produits</a>
-    <a class="nav-link" href="{{ path('add_custom_order') }}">Créer un devis</a>
+
+    {% if is_granted('ROLE_USER') %}
+    <a class="nav-link" href="{{ path('custom_order_plank') }}">Créer un devis</a>
+    {% endif %}
+
+    {# <a class="nav-link" href="{{ path('custom_order_plank') }}">Créer un devis</a> #}
+
     <div class="flex flex-row items-center gap-5">
       <a class="btn btn-primary" href="{{ path('home_contact') }}">Contact</a>
-      <a class="btn-account" href="{{ path('app_login') }}">
+
+      <a class="btn-account" href="{{ path('profile_index') }}">
         <img src="{{ asset('icons/icon-account.svg') }}" alt="Icone Compte">
       </a>
     </div>
