@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
 {% block main %}
-<section class="contact flex flex-column items-center">
-    {{ form_start(registrationForm) }}
-
-    <div class="flex flex-column">
+<section class="section-login flex flex-column items-center justify-center">
+    <div class="flex flex-column items-center">
         <h1 class="text-center">Inscription</h1>
-        <p>Déjà un compte ? <a class="text-link" href="{{ path('app_login') }}">Connectez-vous</a> !</p>
+        <p>Déjà un compte ? <a class="link" href="{{ path('app_login') }}">Connectez-vous</a> !</p>
     </div>
+
+    {{ form_start(registrationForm) }}
 
     {{ form_errors(registrationForm) }}
 
@@ -19,7 +19,7 @@
     {{ form_row(registrationForm.plainPassword, {
     label: 'Password' }) }}
 
-    <div class="flex flex-column">
+    <div id="agree-terms">
         {{ form_row(registrationForm.agreeTerms) }}
     </div>
 
