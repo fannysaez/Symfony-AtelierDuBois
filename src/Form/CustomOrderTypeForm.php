@@ -10,6 +10,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 
 class CustomOrderTypeForm extends AbstractType
 {
@@ -22,15 +23,22 @@ class CustomOrderTypeForm extends AbstractType
                 ],
             ])
             ->add('message')
-            ->add('length')
+            ->add('length', ChoiceType::class, [
+                'choices' => [
+                    'Selectionner une longueur' => null,
+                    '60 cm' => 60,
+                    '80 cm' => 80,
+                    '100 cm' => 100
+                ]
+            ])
             ->add('width')
              ->add('material', EntityType::class, [
                 'class' => Material::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name'
             ])
              ->add('woodType', EntityType::class, [
                 'class' => WoodType::class,
-                'choice_label' => 'id',
+                'choice_label' => 'name',
             ])
             
             // ->add('createdAt')
