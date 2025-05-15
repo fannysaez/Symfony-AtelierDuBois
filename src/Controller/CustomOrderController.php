@@ -13,7 +13,7 @@ use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 
-#[Route('/custom-order')]
+
 final class CustomOrderController extends AbstractController
 {
     // #[Route('/view', name: 'view_custom_order')]
@@ -22,15 +22,15 @@ final class CustomOrderController extends AbstractController
     //     return $this->render('custom_order/index.html.twig');
     // }
 
-    #[Route('/add', name: 'add_custom_order')]
+    #[Route('/custom-order-plank', name: 'custom_order_plank')]
     public function addCustomerOrder(Request $request, EntityManagerInterface $em): Response
     {
         $customOrder = new CustomOrder();
 
         $form = $this->createForm(CustomOrderTypeForm::class, $customOrder);
-        $form->handleRequest($request); 
+        $form->handleRequest($request);
 
-if ($form->isSubmitted() && $form->isValid()) {
+        if ($form->isSubmitted() && $form->isValid()) {
 
             $customOrder->setCreatedAt(new DateTime());
 
@@ -39,11 +39,9 @@ if ($form->isSubmitted() && $form->isValid()) {
         }
 
 
-return $this->render('custom_order/custom_order.html.twig', [
-            
+        return $this->render('custom_order/custom_order.html.twig', [
+
             'form' => $form->createView(),
         ]);
-        
     }
-
 }
