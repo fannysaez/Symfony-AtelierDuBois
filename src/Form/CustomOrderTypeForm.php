@@ -31,7 +31,14 @@ class CustomOrderTypeForm extends AbstractType
                     '100 cm' => 100
                 ]
             ])
-            ->add('width')
+            ->add('width', ChoiceType::class, [
+                'choices' => [
+                    'Selectionner une largeur' => null,
+                    '30 cm' => 30,
+                    '40 cm' => 40,
+                    '50 cm' => 50
+                ]
+            ])
              ->add('material', EntityType::class, [
                 'class' => Material::class,
                 'choice_label' => 'name'
