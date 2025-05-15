@@ -6,16 +6,19 @@
     </h1>
     <a class="btn btn-primary" href="{{ path('home_contact') }}">Contact</a>
   </div>
+
   <img
     class="hero-img-1"
     src="{{ asset('img/image-hero-1.jpg') }}"
     alt="Image Projet Menuiserie 1"
   />
+
   <img
     class="hero-img-2"
     src="{{ asset('img/image-hero-2.jpg') }}"
     alt="Image Projet Menuiserie 2"
   />
+
   <img
     class="hero-img-3"
     src="{{ asset('img/image-hero-3.jpg') }}"
@@ -30,6 +33,7 @@
     de vie, constituent la base de nos produits. Avec notre fabrication et nos
     produits, nous essayons de laisser une empreinte la plus petite possible.
   </h2>
+
   <div class="projects-section flex justify-between">
     <h3>Projets</h3>
     <div class="projects-list flex flex-column">
@@ -38,5 +42,12 @@
       <a class="project-card"> Prochain après-midi de projet le 28 juin </a>
     </div>
   </div>
+
+  <div class="products-section flex flex-column gap-25">
+    
+
+  </div>
+
+  {% include "_partials/card.twig" %}
 </section>
 {% endblock %}
