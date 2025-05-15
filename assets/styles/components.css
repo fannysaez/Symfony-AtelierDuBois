@@ -131,7 +131,8 @@ form div {
 }
 
 input,
-textarea {
+textarea, 
+select {
   padding: 10px 12px 10px 12px;
   border: solid 1px var(--color-dark);
   background-color: var(--color-white);
@@ -146,4 +147,18 @@ textarea {
   resize: vertical;
   min-height: 100px;
   max-height: 300px;
+}
+
+/* Card */
+.card {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 12px;
+  border: solid 1px var(--color-white);
+}
+
+.card:hover {
+  border: solid 1px var(--color-dark);
 }

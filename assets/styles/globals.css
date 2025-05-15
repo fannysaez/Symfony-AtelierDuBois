@@ -8,8 +8,7 @@
 
 @font-face {
   font-family: "Bricolage Grotesque";
-  src: url(../fonts/BricolageGrotesque-VariableFont_opsz\wdth\wght.ttf)
-    format("truetype");
+  src: url(../fonts/BricolageGrotesque-VariableFont.ttf) format("truetype");
 }
 
 :root {
@@ -26,20 +25,24 @@
   --font-bricolage: "Bricolage Grotesque", sans-serif;
 
   /* Font Size */
+  --font-size-p-min: .75rem;
   --font-size-p: 1rem;
   --font-size-h1: 3rem;
   --font-size-h2: 3rem;
   --font-size-h3: 2rem;
+  --font-size-h4: 1.5rem;
 
   /* Font Weight */
   --font-weight-regular: 500;
   --font-weight-medium: 600;
 
   /* Line heights */
+  --line-height-p-min: 1rem;
   --line-height-p: 1.5rem;
   --line-height-h1: 3.125rem;
   --line-height-h2: 3.125rem;
   --line-height-h3: 2.5rem;
+  --line-height-h4: 1.875rem;
 
   /* Spacing Scale (Base: 2px / 0.125rem) */
   --spacing-unit: 0.125rem;
@@ -78,11 +81,24 @@ h3 {
   line-height: var(--line-height-h3);
 }
 
+h4 {
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-h4);
+  line-height: var(--line-height-h4);
+}
+
 p {
   font-family: var(--font-bdo);
   font-size: var(--font-size-p);
   font-weight: var(--font-weight-regular);
   line-height: var(--line-height-p);
+}
+
+.p-min {
+  font-family: var(--font-bdo);
+  font-size: var(--font-size-p-min);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--line-height-p-min);
 }
 
 /* Reset */
