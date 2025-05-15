@@ -99,6 +99,16 @@ section {
   gap: 100px;
 }
 
+/* Products */
+.min-products-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 50px;
+  grid-row-gap: 50px;
+}
+
 /* Login */
 .section-login {
   height: 100vh;
@@ -108,6 +118,7 @@ section {
 
 /* Media Queries */
 @media screen and (max-width: 1024px) {
+
   /* Hero */
   .hero-img-2 {
     visibility: hidden;
