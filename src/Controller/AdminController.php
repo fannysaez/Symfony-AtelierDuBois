@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\Request;
 #[IsGranted('ROLE_ADMIN')]
 final class AdminController extends AbstractController
 {
-    #[Route('/admin', name: 'app_admin')]
+    #[Route('/admin', name: 'admin_dashobard')]
     public function index(EntityManagerInterface $entityManager, Request $request, ProductRepository $productRepository): Response
     {
         $products = $productRepository->findAll();
