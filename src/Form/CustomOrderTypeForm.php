@@ -11,17 +11,26 @@ use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Bundle\SecurityBundle\Security;
 
 class CustomOrderTypeForm extends AbstractType
 {
+    public function __construct(
+        private Security $security
+    ) {}
+
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
             // ->add('firstname')
             // ->add('lastname')
             ->add('email', EmailType::class, [
+                'label' => 'Votre email',
                 'attr' => [
                     'class' => 'flex',
+                    'placeholder' => 'exemple@email.com',
+                    'autocomplete' => 'off',
+                    'value' => $this->security->getUser()->getEmail(),
                 ],
             ])
             ->add('message')
@@ -49,18 +58,15 @@ class CustomOrderTypeForm extends AbstractType
                     '50 cm' => 50
                 ]
             ])
-             ->add('material', EntityType::class, [
+            ->add('material', EntityType::class, [
                 'class' => Material::class,
                 'choice_label' => 'name'
             ])
-             ->add('woodType', EntityType::class, [
+            ->add('woodType', EntityType::class, [
                 'class' => WoodType::class,
                 'choice_label' => 'name',
             ])
-            
             // ->add('createdAt')
-           
-           
         ;
     }
 
