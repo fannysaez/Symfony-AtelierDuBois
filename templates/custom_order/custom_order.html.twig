@@ -1,27 +1,18 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}Devis{% endblock %}
-
-{% block body %}
-
-
-{% block main %}
+{% extends 'base.html.twig' %} {% block title %}Devis{% endblock %} {% block
+body %} {% block main %}
 
 <section class="flex flex-column items-center pt-50 pb-50 gap-50">
-
   <div class="devis-info flex flex-column items-center gap-15">
-
     <h1>Devis Planche</h1>
     <p class="text-center">
       Bonjour {{ app.user.firstname }} {{ app.user.lastname }}, veuillez remplir ce formulaire pour recevoir
       un devis personnalisé pour vos planches sur mesure.
     </p>
-
   </div>
 
   {{ form_start(form) }}
 
-
+ 
   {{ form_widget(form) }}
 
   <button class="btn btn-primary" type="submit">Demander mon devis</button>
@@ -35,8 +26,11 @@
   <div class="plank-info flex items-center gap-50">
     <img src="{{ asset('img/image-planche.jpg') }}" alt="Image Ecologique">
 
-    <h2>Engagés contre l’écologie depuis 1945, nous nous efforçons d’exterminer toute trace d’arbre sur notre planète…
-      pour en faire de magnifiques chaises.</h2>
+    <h2>
+      Engagés contre l’écologie depuis 1945, nous nous efforçons d’exterminer
+      toute trace d’arbre sur notre planète… pour en faire de magnifiques
+      chaises.
+    </h2>
   </div>
 
   <div class="products-section flex flex-column gap-25">
@@ -58,6 +52,4 @@
   </div>
 </section>
 
-{% endblock %}
-
-{% endblock %}
+{% endblock %} {% endblock %}

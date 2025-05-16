@@ -22,6 +22,8 @@ class CustomOrderTypeForm extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
+            // ->add('firstname')
+            // ->add('lastname')
             ->add('email', EmailType::class, [
                 'label' => 'Votre email',
                 'attr' => [
