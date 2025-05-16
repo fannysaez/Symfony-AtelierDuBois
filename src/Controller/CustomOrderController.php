@@ -27,7 +27,7 @@ final class CustomOrderController extends AbstractController
     public function addCustomerOrder(Request $request, EntityManagerInterface $em): Response
     {
         $customOrder = new CustomOrder();
-
+        // $customOrder->setUser($this->getUser());
 
         $form = $this->createForm(CustomOrderTypeForm::class, $customOrder);
         $form->handleRequest($request);
@@ -35,6 +35,7 @@ final class CustomOrderController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $customOrder->setCreatedAt(new DateTime());
+
 
             $em->persist($customOrder);
             $em->flush();

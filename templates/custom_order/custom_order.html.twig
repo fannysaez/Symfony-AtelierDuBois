@@ -12,7 +12,8 @@ body %} {% block main %}
 
   {{ form_start(form) }}
 
- 
+  {{ form_row(form.email, { 'value': '{{ app.user.email }} ' })}}
+
   {{ form_widget(form) }}
 
   <button class="btn btn-primary" type="submit">Sauvegarder</button>
