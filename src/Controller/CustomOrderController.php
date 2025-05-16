@@ -26,7 +26,7 @@ final class CustomOrderController extends AbstractController
     public function addCustomerOrder(Request $request, EntityManagerInterface $em, ProductRepository $productRepository): Response
     {
         $customOrder = new CustomOrder();
-
+        $customOrder->setUser($this->getUser());
 
         $form = $this->createForm(CustomOrderTypeForm::class, $customOrder);
         $form->handleRequest($request);
@@ -34,6 +34,7 @@ final class CustomOrderController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
 
             $customOrder->setCreatedAt(new DateTime());
+
 
             $em->persist($customOrder);
             $em->flush();
@@ -49,5 +50,12 @@ final class CustomOrderController extends AbstractController
             'form' => $form->createView(),
             'latestProducts' => $latestProducts,
         ]);
+    }
+
+    #[Route('/custom-order-plank/view', name: 'custom_order_plank_view')]
+    public function viewCustomerOrder(Request $request, EntityManagerInterface $em, ProductRepository $productRepository): Response
+    {
+
+        return $this->render('custom_order/view_custom_order.html.twig');
     }
 }

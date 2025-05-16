@@ -18,10 +18,8 @@ final class AdminController extends AbstractController
     {
         $products = $productRepository->findAll();
 
-        return $this->render('admin/index.html.twig',[
-        'products' => $products,
+        return $this->render('admin/index.html.twig', [
+            'products' => $products,
         ]);
     }
-    
 }
-
