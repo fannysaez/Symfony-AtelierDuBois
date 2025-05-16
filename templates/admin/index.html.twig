@@ -7,14 +7,15 @@
 
 <section class="dashboard-container">
     <div class="flex flex-column gap-25">
-        <div class="flex justify-between items-center">
-            <h1>Tableau de bord</h1>
-            <div class="action-buttons">
+        <div class="flex flex-column items-center">
+            <h1 class="text-center">Tableau de bord</h1>
+            <p class="text-center p-5">Bienvenue dans l'administration de l'Atelier du Bois</p>
+            <div class="action-buttons p-15">
                 <a href="{{ path('home_index') }}" class="btn btn-primary">Retour au site</a>
             </div>
         </div>
 
-        <div class="dashboard-stats">
+        {# <div class="dashboard-stats">
             <div class="stat-card">
                 <h4>Utilisateurs</h4>
                 <p class="stat-number"></p>
@@ -58,6 +59,7 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     <tr>
                         <td></td>
                         <td></td>
@@ -73,7 +75,7 @@
                     </tr>
                 </tbody>
             </table>
-        </div>
+        </div> #}
 
         <div class="dashboard-section">
             <h3>Derniers produits ajoutés</h3>
@@ -90,18 +92,22 @@
                     </tr>
                 </thead>
                 <tbody>
+
+                    {% for product in products %}
+
                     <tr>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        <td>{{product.name}}</td>
+                        <td>{{product.category.name}}</td>
+                        <td>{{product.material.name}}</td>
+                        <td>{{product.woodtype.name}}</td>
+                        <td>{{product.priceht}}</td>
+                        <td>{{product.createdat|date("d/m/Y")}}</td>
                         <td class="action-buttons">
                             <a href="#" class="btn btn-primary">Éditer</a>
                         </td>
                     </tr>
                     <tr>
+                        {% endfor %}
                         <td colspan="7" class="text-center">Aucun produit trouvé</td>
                     </tr>
                 </tbody>
