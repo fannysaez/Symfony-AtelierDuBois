@@ -103,7 +103,7 @@ section {
 .min-products-grid {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
@@ -117,8 +117,7 @@ section {
 }
 
 /* Media Queries */
-@media screen and (max-width: 1024px) {
-
+@media screen and (max-width: 1240px) {
   /* Hero */
   .hero-img-2 {
     visibility: hidden;
@@ -142,17 +141,23 @@ section {
   .projects-list {
     max-width: 100%;
   }
+
+  /* Min Products */
+  .min-products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+  }
 }
 
 /* Devis */
-
 .devis-info {
   max-width: 500px;
   width: 100%;
 }
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 900px) {
   /* Font Size */
   h1 {
     font-size: 2.3rem;
@@ -183,8 +188,7 @@ section {
   }
 }
 
-@media screen and (max-width: 425px) {
-
+@media screen and (max-width: 600px) {
   /* Font Size */
   h1 {
     font-size: 1.8rem;

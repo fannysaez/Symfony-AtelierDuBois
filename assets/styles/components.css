@@ -157,6 +157,7 @@ textarea {
   gap: 10px;
   padding: 12px;
   border: solid 1px var(--color-white);
+  color: var(--color-dark);
 }
 
 .card img {

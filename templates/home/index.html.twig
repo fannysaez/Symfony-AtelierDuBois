@@ -35,13 +35,17 @@
     <h3>Nos produits</h3>
 
     <div class="min-products-grid">
+
+      {% for product in latestProducts %}
       {% include "_partials/card.twig" %}
-      {% include "_partials/card.twig" %}
-      <a class="product-link" href="">
+      {% endfor %}
+
+      <a class="product-link" href="{{ path('product_index') }}">
         <div>
           <h4>Voir Plus</h4>
         </div>
       </a>
+
     </div>
   </div>
 </section>

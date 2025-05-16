@@ -1,10 +1,10 @@
-<a class="card">
-    <img src="{{ asset('img/Products/img-brundi.jpg') }}" alt="Image Brundi">
+<a class="card" href="{{ path('product_show', {id: product.id}) }}">
+    <img src="{{ asset(product.cover) }}" alt="{{ product.name }}" />
     <div class="flex flex-column">
-        <h4>BRUNDI</h4>
-        <h4>180€</h4>
+        <h4>{{ product.name }}</h4>
+        <h4>{{ product.priceTTC|format_currency('EUR') }}</h4>
     </div>
     <div class="tag">
-        <p class="p-min">Chaises</p>
+        <p class="p-min">{{ product.category.name }}</p>
     </div>
 </a>
