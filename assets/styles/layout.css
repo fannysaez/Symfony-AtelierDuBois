@@ -99,7 +99,7 @@ section {
   gap: 100px;
 }
 
-/* Min Products */
+/* Products */
 .products-grid {
   width: 100%;
   display: grid;
@@ -107,6 +107,16 @@ section {
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   grid-row-gap: 20px;
+}
+
+/* Product Page */
+.product-page {
+  width: 100%;
+  max-width: 1000px;
+}
+
+.product-page img {
+  height: 300px;
 }
 
 /* Login */
