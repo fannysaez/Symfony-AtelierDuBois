@@ -32,7 +32,7 @@
 
 <section class="flex flex-column items-center pt-100 pb-100 gap-50">
 
-  <div class="flex items-center gap-50">
+  <div class="plank-info flex items-center gap-50">
     <img src="{{ asset('img/image-planche.jpg') }}" alt="Image Ecologique">
 
     <h2>Engagés contre l’écologie depuis 1945, nous nous efforçons d’exterminer toute trace d’arbre sur notre planète…
@@ -42,7 +42,7 @@
   <div class="products-section flex flex-column gap-25">
     <h3>Nos produits</h3>
 
-    <div class="min-products-grid">
+    <div class="products-grid">
 
       {% for product in latestProducts %}
       {% include "_partials/card.twig" %}

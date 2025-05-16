@@ -100,7 +100,7 @@ section {
 }
 
 /* Min Products */
-.min-products-grid {
+.products-grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -114,6 +114,12 @@ section {
   height: 100vh;
   padding: 100px 0 200px 0;
   gap: 30px;
+}
+
+/* Devis */
+.devis-info {
+  max-width: 500px;
+  width: 100%;
 }
 
 /* Media Queries */
@@ -143,18 +149,17 @@ section {
   }
 
   /* Min Products */
-  .min-products-grid {
+  .products-grid {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 12px;
     grid-row-gap: 12px;
   }
-}
 
-/* Devis */
-.devis-info {
-  max-width: 500px;
-  width: 100%;
+  /* Order Plank */
+  .plank-info img {
+    width: 300px;
+  }
 }
 
 @media screen and (max-width: 900px) {
@@ -180,11 +185,23 @@ section {
   }
 
   /* Min Products */
-  .min-products-grid {
+  .products-grid {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 12px;
     grid-row-gap: 12px;
+  }
+
+  /* Order Plank */
+  .plank-info {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .plank-info img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 }
 
@@ -216,7 +233,7 @@ section {
   }
 
   /* Min Products */
-  .min-products-grid {
+  .products-grid {
     grid-template-columns: repeat(1, 1fr);
     grid-template-rows: 1fr;
   }

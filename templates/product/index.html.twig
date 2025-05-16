@@ -3,5 +3,15 @@
 {% block title %}L'Atelier du Bois - Nos produits{% endblock %}
 
 {% block main %}
+<section class="flex flex-column items-center pt-50 pb-100 gap-50">
+  <div>
+    <h1 class="text-center">Nos produits</h1>
+  </div>
 
+  <div class="products-grid">
+    {% for product in products %}
+    {% include "_partials/card.twig" %}
+    {% endfor %}
+  </div>
+</section>
 {% endblock %}
