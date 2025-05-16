@@ -4,16 +4,18 @@ namespace App\Controller;
 
 use DateTime;
 use DateTimeImmutable;
+use DateTime;
+use DateTimeImmutable;
 use App\Entity\CustomOrder;
 use App\Form\CustomOrderTypeForm;
 use App\Repository\UserRepository;
+use App\Repository\ProductRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
-
 
 final class CustomOrderController extends AbstractController
 {
@@ -24,7 +26,7 @@ final class CustomOrderController extends AbstractController
     // }
 
     #[Route('/custom-order-plank', name: 'custom_order_plank')]
-    public function addCustomerOrder(Request $request, EntityManagerInterface $em): Response
+    public function addCustomerOrder(Request $request, EntityManagerInterface $em, ProductRepository $productRepository): Response
     {
         $customOrder = new CustomOrder();
 
@@ -40,10 +42,15 @@ final class CustomOrderController extends AbstractController
             $em->flush();
         }
 
+        $latestProducts = $productRepository->findBy(
+            [],
+            ['createdAt' => 'DESC'],
+            3
+        );
 
         return $this->render('custom_order/custom_order.html.twig', [
-
             'form' => $form->createView(),
+            'latestProducts' => $latestProducts,
         ]);
     }
 }

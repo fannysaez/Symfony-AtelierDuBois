@@ -118,4 +118,5 @@ button {
   line-height: var(--line-height-p);
   background: none;
   border: none;
+  cursor: pointer;
 }
