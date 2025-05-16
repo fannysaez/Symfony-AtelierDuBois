@@ -1,0 +1,6 @@
+<a href="{{ path('product_category', {id: category.id}) }}"
+  class="categ-card {{ current_category and current_category.id == category.id ? 'active' : '' }}"
+  href="{{ path('product_category', {'id': category.id}) }}">
+  <img src="{{ asset(category.image) }}" alt="{{ category.name }}">
+  <p>{{ category.name }}</p>
+</a>

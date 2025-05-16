@@ -58,6 +58,10 @@ footer::before {
   color: var(--color-white);
 }
 
+.btn-fit {
+  width: fit-content;
+}
+
 .btn-account {
   display: flex;
   align-items: center;
@@ -169,6 +173,31 @@ textarea {
   transform: scale(0.98);
 }
 
+/* Card Category */
+.categ-card {
+  width: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  padding: 12px;
+  gap: 12px;
+  color: var(--color-dark);
+  border: solid 1px var(--color-white);
+}
+
+.categ-card.active {
+  border: solid 1px var(--color-dark);
+  transform: translateY(-2px);
+}
+
+.categ-card:hover {
+  border: solid 1px var(--color-dark);
+  transform: translateY(-2px);
+}
+
+/* Card Product */
 .product-link {
   display: flex;
   align-items: center;
@@ -191,6 +220,7 @@ textarea {
 .product-link:hover {
   border: solid 1px var(--color-dark);
   transform: scale(0.98);
+  transform: translateY(-2px);
 }
 
 .tag {
@@ -201,7 +231,6 @@ textarea {
 }
 
 /* Dashboard Admin*/
-
 .dashboard-container {
   padding: 30px 0;
 }
