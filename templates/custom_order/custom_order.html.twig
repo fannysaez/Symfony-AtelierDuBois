@@ -13,7 +13,7 @@
 
     <h1>Devis Planche</h1>
     <p class="text-center">
-      Bonjour {{ app.user.email }}, veuillez remplir ce formulaire pour recevoir
+      Bonjour {{ app.user.firstname }} {{ app.user.lastname }}, veuillez remplir ce formulaire pour recevoir
       un devis personnalisé pour vos planches sur mesure.
     </p>
 
@@ -24,7 +24,7 @@
 
   {{ form_widget(form) }}
 
-  <button class="btn btn-primary" type="submit">Sauvegarder</button>
+  <button class="btn btn-primary" type="submit">Demander mon devis</button>
 
 
   {{ form_end(form) }}
@@ -39,11 +39,23 @@
       pour en faire de magnifiques chaises.</h2>
   </div>
 
-  <div class="flex items-center gap-50">
-    <p>Nos Produits</p>
+  <div class="products-section flex flex-column gap-25">
+    <h3>Nos produits</h3>
 
+    <div class="min-products-grid">
 
+      {% for product in latestProducts %}
+      {% include "_partials/card.twig" %}
+      {% endfor %}
 
+      <a class="product-link" href="{{ path('product_index') }}">
+        <div>
+          <h4>Voir Plus</h4>
+        </div>
+      </a>
+
+    </div>
+  </div>
 </section>
 
 {% endblock %}
