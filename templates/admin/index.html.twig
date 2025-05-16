@@ -1,20 +1,128 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello AdminController!{% endblock %}
+{% block title %}Tableau de bord - L'Atelier du Bois{% endblock %}
 
-{% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+{% block main %}
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>C:/Users/fanny/Desktop/Briefs/Projet Symfony _ Atelier du Bois/Atelier-du-Bois/src/Controller/AdminController.php</code></li>
-        <li>Your template at <code>C:/Users/fanny/Desktop/Briefs/Projet Symfony _ Atelier du Bois/Atelier-du-Bois/templates/admin/index.html.twig</code></li>
-    </ul>
-</div>
+<section class="dashboard-container">
+    <div class="flex flex-column gap-25">
+        <div class="flex justify-between items-center">
+            <h1>Tableau de bord</h1>
+            <div class="action-buttons">
+                <a href="{{ path('home_index') }}" class="btn btn-primary">Retour au site</a>
+            </div>
+        </div>
+
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <h4>Utilisateurs</h4>
+                <p class="stat-number"></p>
+            </div>
+            <div class="stat-card">
+                <h4>Produits</h4>
+                <p class="stat-number"></p>
+            </div>
+            <div class="stat-card">
+                <h4>Commandes personnalisées</h4>
+                <p class="stat-number"></p>
+            </div>
+            <div class="stat-card">
+                <h4>Matériaux</h4>
+                <p class="stat-number"></p>
+            </div>
+            <div class="stat-card">
+                <h4>Types de bois</h4>
+                <p class="stat-number"></p>
+            </div>
+            <div class="stat-card">
+                <h4>Catégories</h4>
+                <p class="stat-number"></p>
+            </div>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Dernières commandes personnalisées</h3>
+            <div class="chart-container">
+                <canvas id="ordersChart"></canvas>
+            </div>
+            <table class="dashboard-table">
+                <thead>
+                    <tr>
+                        <th>Email</th>
+                        <th>Matériau</th>
+                        <th>Type de bois</th>
+                        <th>Dimensions</th>
+                        <th>Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="action-buttons">
+                            <a href="#" class="btn btn-primary">Détails</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="6" class="text-center">Aucune commande trouvée</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-section">
+            <h3>Derniers produits ajoutés</h3>
+            <table class="dashboard-table">
+                <thead>
+                    <tr>
+                        <th>Nom</th>
+                        <th>Catégorie</th>
+                        <th>Matériau</th>
+                        <th>Type de bois</th>
+                        <th>Prix HT</th>
+                        <th>Date d'ajout</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="action-buttons">
+                            <a href="#" class="btn btn-primary">Éditer</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="7" class="text-center">Aucun produit trouvé</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="dashboard-section">
+                <h3>Matériaux les plus utilisés</h3>
+                <div class="chart-container">
+                    <canvas id="materialsChart"></canvas>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h3>Types de bois les plus demandés</h3>
+                <div class="chart-container">
+                    <canvas id="woodTypesChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}
