@@ -4,9 +4,35 @@
 
 {% block main %}
 
-<section class="products-section flex flex-column gap-25">
+<section class="flex flex-column items-center pt-50 pb-100 gap-50">
+  <div class="flex flex-column items-center gap-15">
+    <h1 class="text-center">Nos produits</h1>
+    <div class="flex gap-10">
+      {% for category in categories %}
+      {% include "_partials/categ-card.twig" with {
+      category: category,
+      current_category: current_category|default(null)
+      } only %}
+      {% endfor %}
+    </div>
+  </div>
 
-
+  <div class="products-grid">
+    {% if products|length > 0 %}
+    {% for product in products %}
+    {% include "_partials/card.twig" with {product: product} %}
+    {% endfor %}
+    {% else %}
+    <p> </p>
+    <div class="flex items-center">
+      <h4>Aucun produit disponible dans cette catégorie pour le moment.</h4>
+    </div>
+    <a class="product-link" href="{{ path('product_index') }}">
+      <div>
+        <h4 class="text-center">Voir tous <br> nos produits</h4>
+      </div>
+    </a>
+    {% endif %}
 </section>
 
 {% endblock %}

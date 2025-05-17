@@ -12,29 +12,22 @@
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
         {% endif %}
 
-        {% if app.user %}
-        <div class="mb-3">
-            Bonjour, {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Déconnexion</a>
-        </div>
-        {% endif %}
-
         <div class="flex flex-column">
             <label for="inputEmail">Email</label>
-            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control"
-                autocomplete="email" required autofocus>
+            <input type="email" value="{{ last_username }}" name="email" id="inputEmail" placeholder="exemple@email.com"
+                autocomplete="off" required autofocus>
         </div>
 
         <div class="flex flex-column">
-            <label for="inputPassword">Password</label>
-            <input type="password" name="password" id="inputPassword" class="form-control"
-                autocomplete="current-password" required>
+            <label for="inputPassword">Mot de passe</label>
+            <input type="password" name="password" id="inputPassword" autocomplete="current-password" required>
             <input type="hidden" name="_csrf_token" data-controller="csrf-protection"
                 value="{{ csrf_token('authenticate') }}">
         </div>
 
         <div class="checkbox mb-3">
             <label>
-                <input type="checkbox" name="_remember_me"> souviens-toi de moi
+                <input type="checkbox" name="_remember_me"> Ce souvenir de moi
             </label>
         </div>
 
